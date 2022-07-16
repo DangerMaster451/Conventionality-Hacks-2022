@@ -10,18 +10,19 @@
 
 	<!-- linking style.css file-->
 	<link rel="stylesheet" href="{{ url_for('static',filename='styles/currency.css') }}">
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
 </head>
 
 <body>
 
+    <div id="particles-js"></div>
 	<!-- Currency Converter -->
-	<h1 class="heading text-center display-2">
-		Currency Converter</h1>
+	<p class="title">Currency Converter</p>
 
 	<hr>
 	<div class="container">
 
-		<div class="main">
+		<center><div class="main">
 
 			<div class="form-group">
 				<label for="oamount">
@@ -36,9 +37,9 @@
 				<div class="col-sm-6">
 					<div class="input-group mb-3">
 						<div class="input-group-prepend">
-							<span class="input-group-text">From</span>
+							<span class="subtitle">From</span>
 						</div>
-						<select class="form-control from" id="sel1">
+						<select class="dropdown" id="sel1">
 							<option value="">Select One …</option>
 							<option value="USD">USD</option>
 							<option value="AED">AED</option>
@@ -99,9 +100,9 @@
 				<div class="col-sm-6">
 					<div class="input-group mb-3">
 						<div class="input-group-prepend">
-							<span class="input-group-text">To</span>
+							<span class="subtitle">To</span>
 						</div>
-						<select class="form-control to" id="sel2">
+						<select class="dropdown" id="sel2">
 							<option value="">Select One …</option>
 							<option value="USD">USD</option>
 							<option value="AED">AED</option>
@@ -163,14 +164,14 @@
 			<div class="text-center">
 
 				<!-- convert button -->
-				<button class="btn btn-primary convert m-2"
+				<button class="button"
 						onclick="getResults()"type="submit">
                         
 					Convert
 			</button>
 
 				<!-- reset button -->
-				<button class="btn btn-primary m-2"
+				<button class="button"
 						onclick="clearVal()">
 				Reset
 			</button>
@@ -186,11 +187,13 @@
 					style="color:green;">
 		</span>
 			</h2>
-		</div>
+		</div></center>
 	</div>
 
-	<!-- linking script.js file -->
+	<!-- linking script.js file and particals-->
     <script src="static/currency/currency.js"></script>
+    <script src="{{ url_for('static',filename='particles/particles.js') }}"></script>
+    <script src="{{ url_for('static',filename='particles/app.js') }}"></script>
 </body>
 
 </html>
