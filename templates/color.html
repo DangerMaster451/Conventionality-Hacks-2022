@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Color Picker</title>
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/styles.css') }}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap"
+    </head>
+
+    <body>
+        <p class="title">Color Picker</p>
+        <form method="post">
+            <input type="color" id="picker">    
+            <input type="submit" value="Select...">
+            <div>
+                <p>{{color}}</p>
+            </div>
+        </form>
+    </body>
+</html>
