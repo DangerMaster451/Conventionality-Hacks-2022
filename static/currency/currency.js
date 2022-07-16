@@ -2,8 +2,8 @@ const api = "https://api.exchangerate-api.com/v4/latest/USD";
 
 var search = document.querySelector(".searchBox");
 var convert = document.querySelector(".convert");
-var fromCurrecy = document.querySelector(".from");
-var toCurrecy = document.querySelector(".to");
+var fromCurrency = document.querySelector(".from");
+var toCurrency = document.querySelector(".to");
 var finalValue = document.querySelector(".finalValue");
 var finalAmount = document.getElementById("finalAmount");
 var resultFrom;
@@ -11,13 +11,12 @@ var resultTo;
 var searchValue;
 
 // Event when currency is changed
-fromCurrecy.addEventListener('change', (event) => {
+/*fromCurrency.addEventListener('change', (event) => {
 	resultFrom = `${event.target.value}`;
-    console.log(`Result From: ${resultFrom}`)
 });
 
 // Event when currency is changed
-toCurrecy.addEventListener('change', (event) => {
+toCurrency.addEventListener('change', (event) => {
 	resultTo = `${event.target.value}`;
     
 });
@@ -30,22 +29,41 @@ function updateValue(e) {
 }
 
 // when user clicks, it calls function getresults
-convert.addEventListener("click", getResults);
+swapperconvert.addEventListener("click", getResults); */
 
 // getting results
-function getResults() {
-	fetch(`${api}`)
-		.then(currency => {
-			return currency.json();
-		}).then(displayResults);
+async function getResults() {
+    //fetch("static/currency/Currencies.json")
+    await fetch(api)
+        .then(currency => {
+            json = currency.json();
+            console.log(json);
+            return json;
+        }).then(displayResults);
 }
 
 // show results
 function displayResults(currency) {
-	let fromRate = currency.rates[resultFrom];
-	let toRate = currency.rates[resultTo];
-	finalValue.innerHTML =
-	((toRate / fromRate) * searchValue).toFixed(2);
+	let fromRate = document.getElementById("sel1").value;
+	let toRate = document.getElementById("sel2").value;
+    let searchValue = document.getElementById("oamount").value;
+
+    let fromValue = parseFloat(currency["rates"][fromRate]);
+    let toValue = parseFloat(currency["rates"][toRate]);
+
+    searchValue = parseFloat(searchValue);
+
+    console.log(typeof searchValue);
+    console.log(typeof fromValue);
+    console.log(typeof toValue);
+
+    var output = ((fromValue * searchValue) / toValue).toFixed(2);
+    console.log(output);
+    
+    //console.log(`Search Value: ${searchValue}`)
+    //console.log(`From Rate: ${fromRate}, From Value: ${fromValue}`);
+    //console.log(`To Rate: ${toRate}, To Value: ${toValue}`);
+	finalValue.innerHTML = output;
 	finalAmount.style.display = "block";
 }
 
@@ -56,6 +74,8 @@ function clearVal() {
 
 
 };
+
+
 
 
 

@@ -31,4 +31,8 @@ def spell():
 def code():
     return render_template('code.html')
 
+@app.route('/basic', methods=('GET', 'POST'))
+def basic():
+    return render_template('basic.html')
+
 app.run(host='0.0.0.0', port=81)

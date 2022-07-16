@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Title</title>
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/styles.css') }}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap"
+    </head>
+
+    <body>
+        <div id="particles-js"></div>
+        <div id="menu">
+            <center><p class="title">Title</p>
+            <p class="subtitle">Place your content in here...</p>
+                <iframe src="https://c.tenor.com/x8v1oNUOmg4AAAAd/rickroll-roll.gif" width="720px" height="720px">
+            </center>
+        </div>     
+
+        <script src="{{ url_for('static',filename='particles/particles.js') }}"></script>
+        <script src="{{ url_for('static',filename='particles/app.js') }}"></script>
+    </body>
+</html>
