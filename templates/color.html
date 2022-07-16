@@ -9,13 +9,13 @@
     </head>
 
     <body>
-        <p class="title">Color Picker</p>
-        <form method="post">
-            <input type="color" id="picker">    
-            <input type="submit" value="Select...">
-            <div>
-                <p>{{color}}</p>
-            </div>
-        </form>
+        <div id="particles-js"></div>
+        <div id="menu">
+            <center><p class="title">Color Picker</p>
+            <input type="color" id="picker"></center>
+        </div>     
+
+        <script src="{{ url_for('static',filename='particles/particles.js') }}"></script>
+        <script src="{{ url_for('static',filename='particles/app.js') }}"></script>
     </body>
 </html>

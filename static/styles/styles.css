@@ -2,7 +2,36 @@
 .title {
     font-family: 'Ubuntu', sans-serif;
     font-size: 48px;
-    text-align: center
+    text-align: center;
+    color: #fff;
+    margin-bottom: 25px;
+}
+
+.subtitle {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 24px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 25px;
+}
+
+#menu {
+    position: relative;
+    display: block;
+}
+
+#inner {
+    padding-bottom: 25px;
+}
+
+#particles-js {
+    width: 95%;
+    height: 90%;
+    position: absolute;
+}
+
+body {
+    background-color: #0e4a62;
 }
 
 input {

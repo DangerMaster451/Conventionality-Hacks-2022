@@ -25,8 +25,16 @@ hr {
     width: 40%;
     margin-bottom: 55px;
 }
+label {
+    font-size: 20px;
+}
+  
+.btn {
+    width: 200px;
+}
+  
 #finalAmount {
-    font-family: 'Lobster', cursive;
+    font-family: 'Ubuntu', sans-serif;
     display: none;
     margin: 50px auto;
 }
@@ -36,6 +44,26 @@ hr {
 }
   
 .finalValue {
-    font-family: 'Amiri', serif;
+    font-family: 'Ubuntu', sans-serif;
 }
   
+@media (max-width: 768px) {
+    hr {
+        width: 60%;
+    }
+    .main {
+        width: 100%;
+    }
+}
+  
+@media (max-width: 400px) {
+    .heading {
+        font-size: 60px;
+    }
+    hr {
+        width: 75%;
+    }
+    #finalAmount h2, .finalValue {
+        font-size: 40px;
+    }
+}

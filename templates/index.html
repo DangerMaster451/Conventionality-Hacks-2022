@@ -10,13 +10,30 @@
     </head>
 
     <body>
-        <p class="title">Conventionality</p>
-        <input type="button" onclick="window.location.href = '/calculator';" value="Calculator"/>
-        <input type="button" onclick="window.location.href = '/todo';" value="To-Do List"/>
-        <input type="button" onclick="window.location.href = '/currency';" value="Currency Converter"/>
-        <input type="button" onclick="window.location.href = '/color';" value="Color Picker"/>
-        <input type="button" onclick="window.location.href = '/spell';" value="Spell Checker"/>
-        <input type="button" onclick="window.location.href = '/downloader';" value="Youtube Downloader"/>
-        <input type="button" onclick="window.location.href = '/code';" value="Morse Code"/>
+        <div id="particles-js"></div>
+        <center><div id="menu">
+            
+            <p class="title">Conventionality</p>
+            <p class="subtitle">Matthew, Andrew, Aditya</p>
+            <div id="inner">
+                <form>
+                    <input type="button" onclick="window.location.href = '/calculator';" value="Calculator"/>
+                    <input type="button" onclick="window.location.href = '/todo';" value="To-Do List"/>
+                    <input type="button" onclick="window.location.href = '/currency';" value="Currency Converter"/>
+                </form>
+            </div>
+            <div id="inner">
+                <form>
+                    <input type="button" onclick="window.location.href = '/color';" value="Color Picker"/>
+                    <input type="button" onclick="window.location.href = '/spell';" value="Spell Checker"/>
+                    <input type="button" onclick="window.location.href = '/code';" value="Morse Code"/>
+                </form>
+            </div>
+        </div></center>
+        
+
+             
+        <script src="{{ url_for('static',filename='particles/particles.js') }}"></script>
+        <script src="{{ url_for('static',filename='particles/app.js') }}"></script>
     </body>
 </html>

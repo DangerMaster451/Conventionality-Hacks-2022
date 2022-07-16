@@ -1,4 +1,5 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, url_for, flash, redirect
+import cgi
 
 app = Flask(__name__)
 
@@ -16,7 +17,7 @@ def todo():
 
 @app.route('/currency', methods=('GET', 'POST'))
 def currency():
-    return render_template('currency.html')
+   return render_template('currency.html')
 
 @app.route('/color', methods=('GET', 'POST'))
 def color():
@@ -25,10 +26,6 @@ def color():
 @app.route('/spell', methods=('GET', 'POST'))
 def spell():
     return render_template('spell.html')
-
-@app.route('/downloader', methods=('GET', 'POST'))
-def downloader():
-    return render_template('downloader.html')
 
 @app.route('/code', methods=('GET', 'POST'))
 def code():
