@@ -12,7 +12,16 @@
     <body>
         <div id="particles-js"></div>
         <div id="menu">
-            <center><p class="title">Morse Code</p>
+            <center>
+                <p class="title">Morse Code</p>
+                <p class="subtitle">Mode: </p>
+                <label class="subtitle" for="text">Text to Morse Code: </label>
+                <input type="radio" value="Text to Morse Code" id="text" name="mode">
+                <label class="subtitle" for="text">Morse Code to Text: </label>
+                <input type="radio" value="Morse Code to Text" id="code" name="mode"><br>
+
+                <textarea class="inputbox" id=value>Hello World</textarea>
+                
             </center>
         </div>     
 

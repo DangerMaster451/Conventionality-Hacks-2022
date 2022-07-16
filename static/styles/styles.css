@@ -52,3 +52,31 @@ input:hover {
     background-color: #2E169D;
     border: 5px solid black;
 }
+
+input[type=radio] {
+    transition-duration: 0.4s;
+    padding: 15px;
+    margin: 15px;
+    width: 100px;
+    height: 25px;
+    border: 5px solid #2E169D;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 24px;
+    background-color: #1B93C4;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.inputbox {
+    transition-duration: 0.4s;
+    padding: 15px;
+    margin: 15px;
+    width: 1000px;
+    height: 500px;
+    border: 5px solid #2E169D;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 24px;
+    background-color: #1B93C4;
+    font-family: 'Ubuntu', sans-serif;
+}
