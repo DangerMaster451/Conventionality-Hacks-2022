@@ -85,3 +85,9 @@ input[type=radio] {
     background-color: #1B93C4;
     font-family: 'Ubuntu', sans-serif;
 }
+
+.gen {
+    font-size: 72px;
+    color: white;
+    width: 42px;
+}

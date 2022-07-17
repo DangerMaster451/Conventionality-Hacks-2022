@@ -13,7 +13,7 @@ def calculator():
 
 @app.route('/randomnum', methods=('GET', 'POST'))
 def todo():
-    return render_template('randomnumgenerator.html')
+    return render_template('randomnum.html')
 
 @app.route('/currency', methods=('GET', 'POST'))
 def currency():
@@ -23,9 +23,9 @@ def currency():
 def color():
     return render_template('color.html')
 
-@app.route('/spell', methods=('GET', 'POST'))
-def spell():
-    return render_template('spell.html')
+#@app.route('/turn', methods=('GET', 'POST'))
+#def turn():
+#    return render_template('turn.html')
 
 @app.route('/code', methods=('GET', 'POST'))
 def code():

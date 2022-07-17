@@ -10,19 +10,17 @@
     </head>
 
     <body>
-
         <div id="particles-js"></div>
         <div id="menu">
-        <center><p class="title">Random Number Generator</p>
-        </center>
-        <input type="text" id="num1" placeholder="Number 1" required>
-        <input type="text" id="num2" placeholder="Number 2" required>
-        <input type="submit" name="myButton">
-</button>
+            <center><p class="title">Who's Turn Is It?</p>
+                <p class="subtitle">Choose a Random Name From a List</p>
+                <textarea class="inputbox"></textarea><br>
+                <input type="submit" value="Generate"/>
+               
+            </center>
         </div>     
 
         <script src="{{ url_for('static',filename='particles/particles.js') }}"></script>
         <script src="{{ url_for('static',filename='particles/app.js') }}"></script>
-
     </body>
 </html>

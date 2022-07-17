@@ -41,7 +41,7 @@ async function getResults() {
     //         return json;
     //     }).then(displayResults);
     const response = await fetch("static/currency/Currencies.json");
-    const currencies = await response.json;
+    const currencies = await response.json();
     console.log(currencies);
     displayResults(currencies);  
 }

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Random Number Generator</title>
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/styles.css') }}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap">
+        <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    </head>
+
+    <body>
+
+        <div id="particles-js"></div>
+        <div id="menu">
+        <center><p class="title">Random Number Generator</p>
+        <input type="text" id="num1" placeholder="Number 1" required>
+        <input type="text" id="num2" placeholder="Number 2" required><br>
+        <input type="submit" name="myButton" onclick="generator()">
+        <p id="finalResult" class="gen"></p></center>
+        </div>     
+
+        <script src="{{ url_for('static',filename='particles/particles.js') }}"></script>
+        <script src="{{ url_for('static',filename='particles/app.js') }}"></script>
+        <script src="static/random/randomnumgen.js"></script>
+        <div id="particles-js"></div>
+        <div id="menu">
+    </body>
+</html>
