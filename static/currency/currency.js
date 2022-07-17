@@ -34,12 +34,16 @@ swapperconvert.addEventListener("click", getResults); */
 // getting results
 async function getResults() {
     //fetch("static/currency/Currencies.json")
-    await fetch(api)
-        .then(currency => {
-            json = currency.json();
-            console.log(json);
-            return json;
-        }).then(displayResults);
+    // await fetch("static/currency/Currencies.json")
+    //     .then(currency => {
+    //         json = currency.json();
+    //         console.log(json);
+    //         return json;
+    //     }).then(displayResults);
+    const response = await fetch("static/currency/Currencies.json");
+    const currencies = await response.json;
+    console.log(currencies);
+    displayResults(currencies);  
 }
 
 // show results
@@ -48,8 +52,8 @@ function displayResults(currency) {
 	let toRate = document.getElementById("sel2").value;
     let searchValue = document.getElementById("oamount").value;
 
-    let fromValue = parseFloat(currency["rates"][fromRate]);
-    let toValue = parseFloat(currency["rates"][toRate]);
+    let fromValue = parseFloat(currency["rates"][toRate]);
+    let toValue = parseFloat(currency["rates"][fromRate]);
 
     searchValue = parseFloat(searchValue);
 

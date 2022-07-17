@@ -20,6 +20,11 @@
     display: block;
 }
 
+#calc {
+    background-color: #6079c3
+    opacity: 0.4;
+}
+
 #inner {
     padding-bottom: 25px;
 }

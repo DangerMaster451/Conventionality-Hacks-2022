@@ -11,9 +11,9 @@ def index():
 def calculator():
     return render_template('calculator.html')
 
-@app.route('/todo', methods=('GET', 'POST'))
+@app.route('/randomnum', methods=('GET', 'POST'))
 def todo():
-    return render_template('todo.html')
+    return render_template('randomnumgenerator.html')
 
 @app.route('/currency', methods=('GET', 'POST'))
 def currency():

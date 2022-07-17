@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>       
+    <head>
+        <title>Title</title>
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/styles.css') }}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap">
+        <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    
+    	<script>
+    	
+    		function dis(val)
+    		{
+    			document.getElementById("result").value+=val
+    		}
+    		
+    		function solve()
+    		{
+    			let x = document.getElementById("result").value
+    			let y = eval(x)
+    			document.getElementById("result").value = y
+    		}
+    		
+    	
+    		function clr()
+    		{
+    			document.getElementById("result").value = ""
+    		}
+    	</script>
+    	<style>
+    		input[type="button"]
+    		{
+        		background-color:;
+        		color: white;
+        		border: #1B93C4 2px;
+        		width:42px;
+    		}
+    
+    		input[type="text"]
+    		{
+                margin: auto;
+        		background-color:black;
+        		border: solid black 2px;
+        		width:85%;
+    		}
+    	</style>
+    </head>
+    
+    <body>
+        <div id="particles-js"></div>
+        <center><div id="menu">
+            <table id="calc">
+        		<tr>
+        			<td colspan="3"><input type="text" id="result"/></td><br>
+        			<td><input type="button" value="c" onclick="clr()"/> </td>
+        		</tr>
+        		<tr>
+        			<td><input type="button" value="1" onclick="dis('1')"/> </td>
+        			<td><input type="button" value="2" onclick="dis('2')"/> </td>
+        			<td><input type="button" value="3" onclick="dis('3')"/> </td>
+        			<td><input type="button" value="/" onclick="dis('/')"/> </td>
+        		</tr>
+        		<tr>
+        			<td><input type="button" value="4" onclick="dis('4')"/> </td>
+        			<td><input type="button" value="5" onclick="dis('5')"/> </td>
+        			<td><input type="button" value="6" onclick="dis('6')"/> </td>
+        			<td><input type="button" value="-" onclick="dis('-')"/> </td>
+        		</tr>
+        		<tr>
+        			<td><input type="button" value="7" onclick="dis('7')"/> </td>
+        			<td><input type="button" value="8" onclick="dis('8')"/> </td>
+        			<td><input type="button" value="9" onclick="dis('9')"/> </td>
+        			<td><input type="button" value="+" onclick="dis('+')"/> </td>
+        		</tr>
+        		<tr>
+        			<td><input type="button" value="." onclick="dis('.')"/> </td>
+        			<td><input type="button" value="0" onclick="dis('0')"/> </td>
+        			<td><input type="button" value="=" onclick="solve()"/> </td>
+        			<td><input type="button" value="*" onclick="dis('*')"/> </td>
+        		</tr>
+    	    </table>
+        </div></center>
+        
+        <script src="{{ url_for('static',filename='particles/particles.js') }}"></script>
+        <script src="{{ url_for('static',filename='particles/app.js') }}"></script>
+    </body>
+</html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Morse Code</title>
+        <title>Title</title>
         <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/styles.css') }}">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -10,19 +10,19 @@
     </head>
 
     <body>
-        
+
         <div id="particles-js"></div>
         <div id="menu">
-            <center>
-                <p class="title">Morse Code</p>
-                <textarea class="inputbox" id=value>Hello World</textarea><br>     
-                <input type="button" onclick="convertToMorseCode()" value="Submit"/>
-                <p class="subtitle" id="output"></p>
-            </center>
+        <center><p class="title">Random Number Generator</p>
+        </center>
+        <input type="text" id="num1" placeholder="Number 1" required>
+        <input type="text" id="num2" placeholder="Number 2" required>
+        <input type="submit" name="myButton">
+</button>
         </div>     
-        
-        <script src="static/code/code.js"></script>
+
         <script src="{{ url_for('static',filename='particles/particles.js') }}"></script>
         <script src="{{ url_for('static',filename='particles/app.js') }}"></script>
+
     </body>
 </html>
